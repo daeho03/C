@@ -1,0 +1,86 @@
+#include
+	C#에서 using 지시문과 비슷한 일을 함
+	다른 파일에 구현된 함수나 변수를 사용할 수 있게 해줌
+	전처리기 지시문 중 하나
+	<>안의 stdio.h는 실제 파일
+	stdio.h 안의 파일을 복사해서 #include <stdio.h>에 붙여넣는것
+		stdio.h 는 C표준 라이브러리 중 일부 : 매크로, 자료형, 함수 등을 모아 놓은 것, Standard Input and Output
+
+int main(void)
+{
+	return 0;
+}
+	반드시 int를 반환해야 함, 0 : 프로그램에 문제가 없었다는 뜻
+	void를 생략한다고 매개변수가 없다는 뜻이 아님
+	함수 선언에서 void를 생략하면 매개변수를 받는다는 의미 *단 개수와 자료형을 모름
+	함수 정의{ }에서 void를 생략하면 매개변수가 없다는 뜻
+
+c는 printf로 출력할려면 서식문자를 사용해야함
+	문자열 : '%s'
+	정수 : '%d'
+	long : '%ld'
+	float : '%f'
+	char : '%c'
+
+c89는 주석을 /* */만 가능함
+
+C는 절차적 언어
+	프로세스
+	class : 없음
+	함수 : 모두 전역함수, 어디서나 호출 가능
+	변수 : 함수 밖이면 전역변수, 함수 안이면 지역변수
+
+char
+	최소 8비트
+	1바이트를 CHAR_BIT만큼이라고 말함
+	unsigned char : 0 ~ 255
+	signed char : -127 ~ 127
+	char : 0 ~ 127
+	C표준은 signed/unsigned가 생략된 char형이 signed인지, unsigned인지에 대해 정의하지 않고, 컴파일러 구현에 따라 달라진다.
+
+short
+	최소 16비트이고 char의 크기 이상인 정수형
+	메모리를 적게 쓰기 위해 사용
+	int대신 사용할 경우 느려질 수 있음
+	unsigned : 0 ~ 65535
+	signed : -32768 ~ 32767
+
+int
+	최소 16비트이고 short의 크기 이상인 정수형
+	오랫동안 32비트를 int의 크기로 사용
+	unsigned int를 사용할 때는 숫자뒤에 u
+
+long
+	최소 32비트이고 int의 크기 이상
+	C언어는 32비트까지
+	리터럴 l, unsigned를 사용할 때는 ul : unsigned long
+
+float
+	char의 크기 이상이기만 하면 됨
+	32비트
+	IEEE 754가 아닐수도 있음
+	리터럴 f
+
+double
+	float크기 이상이면 됨
+	크기 : 64비트
+	범위 IEEE 754 Double과 동일(소형기기 아닐경우)
+	unsigned형 없음
+
+long double
+	double보다 정밀도가 높음
+	double크기 이상이면 됨
+	unsigned형 없음	
+
+bool은 C89에서는 없음
+	정수로 대체 가능 1이면 true 0이면 false
+
+열거형
+	다른변수끼리도 가능하니 주의
+
+C89 변수 선언
+	블록 시작에서 선언해야함 안 할 경우 컴파일 오류
+	블록 시작이기 때문에 함수 내부에 블록을 만들어서 선언해도 됨 대신 바깥 블록에서는 접근 못 함
+
+C는 switch에 정수형만 가능
+	swtich에서 break;를 사용하지 않을 경우 /* intentional fallthrough */ 붙이기
