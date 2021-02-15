@@ -15,4 +15,11 @@
 		한 데이터씩 읽기
 		한 블록씩 읽기(이진 데이터)
 	한 글자씩 읽기
-	
+		한 글자(char)를 읽어오고 필요한 곳에 사용하고 처음으로 돌아가는 방식
+			ex)
+				#include <stdio.h>
+				int c;
+				while (TRUE) {		#define TRUE (1)
+					c = getchar();
+					putchar(c);
+				}
