@@ -23,3 +23,10 @@
 					c = getchar();
 					putchar(c);
 				}
+			1. getchar() 함수가 아직 반환 안 함
+			2. 키보드로 글자 입력 후 엔터키 누름
+			3. 버퍼로부터 한 글자를 읽어옴
+			4. 읽은 문자를 출력
+			5. 버퍼에 문자가 남아있으므로 3으로 돌아감
+		int getchar(void);
+		int fgetc(FILE* stream);
