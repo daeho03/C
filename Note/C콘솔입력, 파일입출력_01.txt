@@ -29,4 +29,13 @@
 			4. 읽은 문자를 출력
 			5. 버퍼에 문자가 남아있으므로 3으로 돌아감
 		int getchar(void);
-		int fgetc(FILE* stream);
+			입력의 끝을 나타내는 값, 'EOF'
+				EOF는 C 표준에 의하면 음수
+				char은 부호가 있을수도 없을수도 있음
+				따라서 char에 언제나 'EOF'를 담는것이 불가
+`				이게 getchar()가 int를 반환하는 이유
+			키보드(stdin)으로부터 문자 하나를 읽음
+			반환값
+				성공 시, 읽은 문자(의 아스키코드)를 반환
+				실패 시, EOF를 반환
+			fgetc(stdin)하고 같음
