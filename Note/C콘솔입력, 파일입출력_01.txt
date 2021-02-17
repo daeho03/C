@@ -16,17 +16,17 @@
 		한 블록씩 읽기(이진 데이터)
 	한 글자씩 읽기
 		한 글자(char)를 읽어오고 필요한 곳에 사용하고 처음으로 돌아가는 방식
-				#include <stdio.h>
-				int c;
-				while (TRUE) {		#define TRUE (1)
-					c = getchar();
-					putchar(c);
-				}
-			1. getchar() 함수가 아직 반환 안 함
-			2. 키보드로 글자 입력 후 엔터키 누름
-			3. 버퍼로부터 한 글자를 읽어옴
-			4. 읽은 문자를 출력
-			5. 버퍼에 문자가 남아있으므로 3으로 돌아감
+			#include <stdio.h>
+			int c;
+			while (TRUE) {		#define TRUE (1)
+				c = getchar();
+				putchar(c);
+			}
+				1. getchar() 함수가 아직 반환 안 함
+				2. 키보드로 글자 입력 후 엔터키 누름
+				3. 버퍼로부터 한 글자를 읽어옴
+				4. 읽은 문자를 출력
+				5. 버퍼에 문자가 남아있으므로 3으로 돌아감
 		int getchar(void);
 			입력의 끝을 나타내는 값, 'EOF'
 				EOF는 C 표준에 의하면 음수
@@ -47,3 +47,5 @@
 		}
 			이렇게 줄일 수 있음
 			연산자 우선순위때문에 c = getchar()를 괄호로 감싸줘야 함
+	한 줄씩 읽기
+		
