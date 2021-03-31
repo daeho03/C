@@ -7,3 +7,21 @@
 	구조체의 필요성
 		사람은 보통 물체 단위로 봄
 		실수도 막을 수 있음
+	초기화x
+	typedef
+		이미 있는 자료형에 새로운 별명을 지어줌
+		1.
+			struct date{
+				...
+			};
+			typedef date date_t;
+		2.
+			typedef struct date{
+				...
+			}date_t;
+		3.
+			typedef struct{
+				...
+			}date_t;
+		enum도 마찬가지
+	가능하면 구조체, 열거형, 공용체에 typedef를 써서 제대로 된 자료형처럼 보이게 하는게 좋음
